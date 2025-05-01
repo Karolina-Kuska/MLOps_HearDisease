@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/b84ac62564d64ed2bf58061876e03b78/artifacts
+end_time: 1746099865868
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: b84ac62564d64ed2bf58061876e03b78
+run_name: delightful-ape-519
+run_uuid: b84ac62564d64ed2bf58061876e03b78
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746099857986
+status: 3
+tags: []
+user_id: Dell
