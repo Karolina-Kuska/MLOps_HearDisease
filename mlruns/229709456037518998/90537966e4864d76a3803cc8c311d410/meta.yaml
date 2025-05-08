@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/90537966e4864d76a3803cc8c311d410/artifacts
+end_time: 1746720217612
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: 90537966e4864d76a3803cc8c311d410
+run_name: crawling-toad-380
+run_uuid: 90537966e4864d76a3803cc8c311d410
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746720207259
+status: 3
+tags: []
+user_id: Dell
