@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/f0a3240d585e478a9a3041d6052ac321/artifacts
+end_time: 1746720267149
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: f0a3240d585e478a9a3041d6052ac321
+run_name: suave-goat-796
+run_uuid: f0a3240d585e478a9a3041d6052ac321
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746720261424
+status: 3
+tags: []
+user_id: Dell
