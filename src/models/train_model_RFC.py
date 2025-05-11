@@ -11,6 +11,7 @@ from sklearn.metrics import (
 import matplotlib.pyplot as plt
 from mlflow.models.signature import infer_signature
 
+mlflow.set_tracking_uri("file:///tmp/mlruns")  # 👈 zmień lokalizację artefaktów na poprawną w Linuxie
 def train_and_save_model_RFC(train_path="data/processed/train_preprocessed.csv",
                          test_path="data/processed/test_preprocessed.csv",
                          model_output_dir="models"):
