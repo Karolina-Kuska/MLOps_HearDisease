@@ -1,32 +1,47 @@
 import mlflow
-import mlflow.sklearn
 import pickle
+import joblib
 import pandas as pd
-from sklearn.metrics import classification_report, accuracy_score
+from sklearn.metrics import classification_report, accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 
 # Wczytanie danych testowych
-df_test = pd.read_csv("data/processed/test.csv")
+#df_test = pd.read_csv("data/processed/test.csv")
+df_test = pd.read_csv("data/processed/test_preprocessed.csv")
 
 # Wczytanie modelu
-model = pickle.load(open("models/heart_disease_model.pkl", "rb"))
+# model = pickle.load(open("models/heart_disease_model.pkl", "rb"))
+model = joblib.load("models/heart_disease_model.pkl")
 
-# Przewidywanie wyników
-X_test = df_test.drop(columns=["target"])
-y_test = df_test["target"]
+# Przygotowanie danych
+X_test = df_test.drop(columns=["HeartDisease"])
+y_test = df_test["HeartDisease"]
+
+# Przewidywanie
 y_pred = model.predict(X_test)
 
 # Ocena modelu
 accuracy = accuracy_score(y_test, y_pred)
-class_report = classification_report(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+roc_auc = roc_auc_score(y_test, y_pred)
 
-# Logowanie do MLflow
-mlflow.log_param("model_type", "RandomForest")
+# Logowanie nowych metryk do MLflow
+mlflow.set_experiment("heart_disease_experiment")
+mlflow.start_run()
 mlflow.log_metric("accuracy", accuracy)
-mlflow.log_artifact("models/heart_disease_model.pkl")
+mlflow.log_metric("precision", precision)
+mlflow.log_metric("recall", recall)
+mlflow.log_metric("f1_score", f1)
+mlflow.log_metric("roc_auc", roc_auc)
 
-# Pokazywanie wyników
+# Pokazanie wyników
 print(f"Accuracy: {accuracy}")
-print(f"Classification Report:\n{class_report}")
+print(f"Precision: {precision}")
+print(f"Recall: {recall}")
+print(f"F1 Score: {f1}")
+print(f"ROC AUC: {roc_auc}")
+print(f"Classification Report:\n{classification_report(y_test, y_pred)}")
 
 # Zakończenie sesji MLflow
 mlflow.end_run()

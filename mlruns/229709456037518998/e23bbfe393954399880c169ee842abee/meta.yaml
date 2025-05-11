@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/e23bbfe393954399880c169ee842abee/artifacts
+end_time: 1746950447330
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: e23bbfe393954399880c169ee842abee
+run_name: spiffy-sow-249
+run_uuid: e23bbfe393954399880c169ee842abee
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746950433850
+status: 3
+tags: []
+user_id: Dell
