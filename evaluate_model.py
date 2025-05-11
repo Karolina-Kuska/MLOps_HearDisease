@@ -54,8 +54,7 @@ def evaluate_model(model_name):
         mlflow.sklearn.log_model(
             model, "model",
             input_example=X_test.iloc[:1],
-            signature=mlflow.models.infer_signature(X_test, y_pred),
-            artifact_path=artifact_path  # scieżkę artefaktów
+            signature=mlflow.models.infer_signature(X_test, y_pred)
         )
 
 if __name__ == "__main__":
