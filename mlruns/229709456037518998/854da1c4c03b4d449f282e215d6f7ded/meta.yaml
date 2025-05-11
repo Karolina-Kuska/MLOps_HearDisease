@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/854da1c4c03b4d449f282e215d6f7ded/artifacts
+end_time: 1746951756263
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: 854da1c4c03b4d449f282e215d6f7ded
+run_name: likeable-squid-262
+run_uuid: 854da1c4c03b4d449f282e215d6f7ded
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746951756087
+status: 3
+tags: []
+user_id: Dell

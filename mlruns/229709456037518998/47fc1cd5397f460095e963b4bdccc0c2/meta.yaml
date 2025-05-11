@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/47fc1cd5397f460095e963b4bdccc0c2/artifacts
+end_time: 1746951747138
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: 47fc1cd5397f460095e963b4bdccc0c2
+run_name: judicious-chimp-116
+run_uuid: 47fc1cd5397f460095e963b4bdccc0c2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746951738729
+status: 3
+tags: []
+user_id: Dell

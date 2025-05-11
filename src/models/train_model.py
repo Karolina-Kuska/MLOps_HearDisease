@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import precision_score, recall_score, f1_score
 import joblib
 import mlflow
 import mlflow.sklearn
@@ -30,10 +31,15 @@ def train_and_save_model(train_path="data/processed/train_preprocessed.csv", tes
 
     # Metryki
     accuracy = accuracy_score(y_test, y_pred)
-    clf_report = classification_report(y_test, y_pred)
+    precision = precision_score(y_test, y_pred)
+    recall = recall_score(y_test, y_pred)
+    f1 = f1_score(y_test, y_pred)
 
     print(f"Accuracy: {accuracy}")
-    print(f"Classification Report:\n{clf_report}")
+    print(f"Precision: {precision}")
+    print(f"Recall: {recall}")
+    print(f"F1 Score: {f1}")
+    print(f"Classification Report:\n{classification_report(y_test, y_pred)}")
 
     # Zapis modelu jako .pkl
     os.makedirs(model_output_dir, exist_ok=True)
@@ -46,6 +52,9 @@ def train_and_save_model(train_path="data/processed/train_preprocessed.csv", tes
     mlflow.set_experiment("heart_disease_experiment")
     mlflow.start_run()
     mlflow.log_metric("accuracy", accuracy)
+    mlflow.log_metric("precision", precision)
+    mlflow.log_metric("recall", recall)
+    mlflow.log_metric("f1_score", f1)
     mlflow.log_param("model", "LogisticRegression")
     mlflow.sklearn.log_model(model, "model")
     mlflow.end_run()

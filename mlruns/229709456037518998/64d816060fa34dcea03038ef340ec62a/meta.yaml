@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/64d816060fa34dcea03038ef340ec62a/artifacts
+end_time: 1746951626617
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: 64d816060fa34dcea03038ef340ec62a
+run_name: gifted-hen-425
+run_uuid: 64d816060fa34dcea03038ef340ec62a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746951618698
+status: 3
+tags: []
+user_id: Dell

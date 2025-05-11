@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/7eba84ee5e5a496883b81980623aec39/artifacts
+end_time: 1746950974888
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: 7eba84ee5e5a496883b81980623aec39
+run_name: smiling-turtle-577
+run_uuid: 7eba84ee5e5a496883b81980623aec39
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746950967260
+status: 3
+tags: []
+user_id: Dell

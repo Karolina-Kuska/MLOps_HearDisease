@@ -1,6 +1,9 @@
 @echo off
 setlocal EnableDelayedExpansion
 
+REM --- Activate venv ---
+call .\.venv\Scripts\activate.bat
+
 REM --- Start Timer ---
 for /f %%i in ('powershell -command "Get-Date -Format o"') do set START=%%i
 
@@ -14,8 +17,7 @@ echo [3/4] Evaluating model...
 python test_evaluate_model.py
 
 echo [4/4] Starting MLflow UI at http://127.0.0.1:5000 ...
-call .\.venv\Scripts\activate.bat
-start cmd /k "mlflow ui"
+start cmd /k "call .venv\Scripts\activate.bat && mlflow ui"
 
 REM --- End Timer ---
 for /f %%i in ('powershell -command "Get-Date -Format o"') do set END=%%i
