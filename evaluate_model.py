@@ -2,6 +2,7 @@ import sys
 import joblib
 import pandas as pd
 import mlflow
+import os
 from sklearn.metrics import (
     accuracy_score, precision_score, recall_score,
     f1_score, roc_auc_score, classification_report
@@ -31,7 +32,14 @@ def evaluate_model(model_name):
     print(f"ROC AUC: {roc_auc}")
     print(f"Classification Report:\n{classification_report(y_test, y_pred)}")
 
+    # Ustawienie eksperymentu w MLflow
     mlflow.set_experiment(f"heart_disease_experiment_{model_name}")
+
+    # Ustal miejsce, gdzie będą zapisywane artefakty
+    artifact_path = os.path.join(os.getcwd(), "artifacts")
+    if not os.path.exists(artifact_path):
+        os.makedirs(artifact_path)
+
     with mlflow.start_run(run_name=f"eval_{model_name}"):
         mlflow.log_param("model", model_name)
         mlflow.log_metrics({
@@ -41,10 +49,13 @@ def evaluate_model(model_name):
             "f1_score": f1,
             "roc_auc": roc_auc
         })
+
+        # Zapisz model w MLflow, wskazując miejsce przechowywania artefaktów
         mlflow.sklearn.log_model(
             model, "model",
             input_example=X_test.iloc[:1],
-            signature=mlflow.models.infer_signature(X_test, y_pred)
+            signature=mlflow.models.infer_signature(X_test, y_pred),
+            artifact_path=artifact_path  # scieżkę artefaktów
         )
 
 if __name__ == "__main__":
