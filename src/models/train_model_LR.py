@@ -8,6 +8,7 @@ import mlflow
 import mlflow.sklearn
 import os
 
+mlflow.set_tracking_uri("file:///tmp/mlruns")  # 👈 zmień lokalizację artefaktów na poprawną w Linuxie
 # Funkcja trenująca model i zapisująca go
 def train_and_save_model_LR(train_path="data/processed/train_preprocessed.csv", test_path="data/processed/test_preprocessed.csv", model_output_dir="models"):
     # Wczytanie danych
