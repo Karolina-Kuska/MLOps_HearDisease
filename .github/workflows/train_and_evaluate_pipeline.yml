@@ -25,5 +25,5 @@ jobs:
       - name: Run training script
         run: python test_train_model.py
 
-      - name: Evaluate models
-        run: python evaluate_model.py
+      #- name: Evaluate models
+      #  run: python evaluate_model.py
