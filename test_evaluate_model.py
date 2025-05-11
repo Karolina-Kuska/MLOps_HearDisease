@@ -34,14 +34,14 @@ print(f"ROC AUC: {roc_auc}")
 print(f"Classification Report:\n{classification_report(y_test, y_pred)}")
 
 # Logowanie nowych metryk do MLflow
-mlflow.set_experiment("heart_disease_experiment_LR")
+mlflow.set_experiment("heart_disease_experiment_RFC")
 mlflow.start_run()
 mlflow.log_metric("accuracy", accuracy)
 mlflow.log_metric("precision", precision)
 mlflow.log_metric("recall", recall)
 mlflow.log_metric("f1_score", f1)
 mlflow.log_metric("roc_auc", roc_auc)
-mlflow.log_param("model", "LogisticRegression")
+mlflow.log_param("model", "RandomForestClassifier")
 mlflow.sklearn.log_model(
     model,
     "model",

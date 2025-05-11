@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/558576472166563546/3d9d59065008404d85c90a220c640612/artifacts
+end_time: 1746961221638
+entry_point_name: ''
+experiment_id: '558576472166563546'
+lifecycle_stage: active
+run_id: 3d9d59065008404d85c90a220c640612
+run_name: peaceful-cat-736
+run_uuid: 3d9d59065008404d85c90a220c640612
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746961213946
+status: 3
+tags: []
+user_id: Dell

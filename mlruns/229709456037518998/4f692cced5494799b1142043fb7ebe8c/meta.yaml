@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/4f692cced5494799b1142043fb7ebe8c/artifacts
+end_time: 1746958325847
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: 4f692cced5494799b1142043fb7ebe8c
+run_name: unleashed-pug-913
+run_uuid: 4f692cced5494799b1142043fb7ebe8c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746958316972
+status: 3
+tags: []
+user_id: Dell

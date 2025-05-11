@@ -9,7 +9,7 @@ import mlflow.sklearn
 import os
 
 # Funkcja trenująca model i zapisująca go
-def train_and_save_model(train_path="data/processed/train_preprocessed.csv", test_path="data/processed/test_preprocessed.csv", model_output_dir="models"):
+def train_and_save_model_LR(train_path="data/processed/train_preprocessed.csv", test_path="data/processed/test_preprocessed.csv", model_output_dir="models"):
     # Wczytanie danych
     train_df = pd.read_csv(train_path)
     test_df = pd.read_csv(test_path)
@@ -64,4 +64,4 @@ def train_and_save_model(train_path="data/processed/train_preprocessed.csv", tes
         )
     mlflow.end_run()
 
-    print("Model i metryki zapisane w MLflow.")
+    print("✅ LogisticRegression i metryki zapisane do MLflow.")
