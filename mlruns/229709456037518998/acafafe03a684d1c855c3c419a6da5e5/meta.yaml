@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/acafafe03a684d1c855c3c419a6da5e5/artifacts
+end_time: 1746957232395
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: acafafe03a684d1c855c3c419a6da5e5
+run_name: fearless-trout-391
+run_uuid: acafafe03a684d1c855c3c419a6da5e5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746957232336
+status: 3
+tags: []
+user_id: Dell

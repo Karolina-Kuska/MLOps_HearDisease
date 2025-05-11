@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/558576472166563546/cfe6640cbd594a6ca12d4aa88cd71da8/artifacts
+end_time: 1746957618844
+entry_point_name: ''
+experiment_id: '558576472166563546'
+lifecycle_stage: active
+run_id: cfe6640cbd594a6ca12d4aa88cd71da8
+run_name: classy-zebra-773
+run_uuid: cfe6640cbd594a6ca12d4aa88cd71da8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746957610634
+status: 3
+tags: []
+user_id: Dell

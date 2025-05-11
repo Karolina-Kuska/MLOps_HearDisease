@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/558576472166563546/2494808e20814470be502c7756aaf21e/artifacts
+end_time: 1746956858525
+entry_point_name: ''
+experiment_id: '558576472166563546'
+lifecycle_stage: active
+run_id: 2494808e20814470be502c7756aaf21e
+run_name: calm-ray-226
+run_uuid: 2494808e20814470be502c7756aaf21e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746956851310
+status: 3
+tags: []
+user_id: Dell

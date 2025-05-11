@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/558576472166563546/8f8834cf833e4fd99a2afdc37586e252/artifacts
+end_time: 1746956807308
+entry_point_name: ''
+experiment_id: '558576472166563546'
+lifecycle_stage: active
+run_id: 8f8834cf833e4fd99a2afdc37586e252
+run_name: upbeat-carp-726
+run_uuid: 8f8834cf833e4fd99a2afdc37586e252
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746956792766
+status: 3
+tags: []
+user_id: Dell
