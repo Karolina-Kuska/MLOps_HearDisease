@@ -1,0 +1,6 @@
+artifact_location: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/577949980385315283
+creation_time: 1746966200768
+experiment_id: '577949980385315283'
+last_update_time: 1746966200768
+lifecycle_stage: active
+name: heart_disease_experiment_RandomForestClassifier

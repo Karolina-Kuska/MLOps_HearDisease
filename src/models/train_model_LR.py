@@ -43,7 +43,7 @@ def train_and_save_model_LR(train_path="data/processed/train_preprocessed.csv", 
 
     # Zapis modelu jako .pkl
     os.makedirs(model_output_dir, exist_ok=True)
-    model_path = os.path.join(model_output_dir, "heart_disease_model.pkl")
+    model_path = os.path.join(model_output_dir, "heart_disease_model_LogisticRegression.pkl")
     joblib.dump(model, model_path)
 
     print(f"Model zapisany jako {model_path}")

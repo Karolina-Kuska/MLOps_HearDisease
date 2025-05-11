@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/558576472166563546/cf31c7eebf2145eda00824896e82d395/artifacts
+end_time: 1746966126558
+entry_point_name: ''
+experiment_id: '558576472166563546'
+lifecycle_stage: active
+run_id: cf31c7eebf2145eda00824896e82d395
+run_name: invincible-eel-563
+run_uuid: cf31c7eebf2145eda00824896e82d395
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746966116930
+status: 3
+tags: []
+user_id: Dell

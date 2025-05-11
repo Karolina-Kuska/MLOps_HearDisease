@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/409616355441367506/5d3967238a334c67b083672ad00b2c84/artifacts
+end_time: 1746966200459
+entry_point_name: ''
+experiment_id: '409616355441367506'
+lifecycle_stage: active
+run_id: 5d3967238a334c67b083672ad00b2c84
+run_name: eval_LogisticRegression
+run_uuid: 5d3967238a334c67b083672ad00b2c84
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746966192355
+status: 3
+tags: []
+user_id: Dell
