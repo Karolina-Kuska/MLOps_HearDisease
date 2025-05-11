@@ -1,0 +1,6 @@
+artifact_location: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/462766536406854651
+creation_time: 1746961221898
+experiment_id: '462766536406854651'
+last_update_time: 1746961221898
+lifecycle_stage: active
+name: heart_disease_experiment_RFC

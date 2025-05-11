@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/6b104ec81b3448f5b3152ec04d4227cf/artifacts
+end_time: 1746956181588
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: 6b104ec81b3448f5b3152ec04d4227cf
+run_name: tasteful-hawk-975
+run_uuid: 6b104ec81b3448f5b3152ec04d4227cf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746956173809
+status: 3
+tags: []
+user_id: Dell

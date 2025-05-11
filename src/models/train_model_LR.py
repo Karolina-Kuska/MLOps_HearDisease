@@ -9,7 +9,7 @@ import mlflow.sklearn
 import os
 
 # Funkcja trenująca model i zapisująca go
-def train_and_save_model(train_path="data/processed/train_preprocessed.csv", test_path="data/processed/test_preprocessed.csv", model_output_dir="models"):
+def train_and_save_model_LR(train_path="data/processed/train_preprocessed.csv", test_path="data/processed/test_preprocessed.csv", model_output_dir="models"):
     # Wczytanie danych
     train_df = pd.read_csv(train_path)
     test_df = pd.read_csv(test_path)
@@ -49,14 +49,19 @@ def train_and_save_model(train_path="data/processed/train_preprocessed.csv", tes
     print(f"Model zapisany jako {model_path}")
 
     # Logowanie w MLflow
-    mlflow.set_experiment("heart_disease_experiment")
+    mlflow.set_experiment("heart_disease_experiment_LR")
     mlflow.start_run()
     mlflow.log_metric("accuracy", accuracy)
     mlflow.log_metric("precision", precision)
     mlflow.log_metric("recall", recall)
     mlflow.log_metric("f1_score", f1)
     mlflow.log_param("model", "LogisticRegression")
-    mlflow.sklearn.log_model(model, "model")
+    mlflow.sklearn.log_model(
+        model,
+        "model",
+        input_example=X_test.iloc[:1],
+        signature=mlflow.models.infer_signature(X_test, y_pred)
+        )
     mlflow.end_run()
 
-    print("Model i metryki zapisane w MLflow.")
+    print("✅ LogisticRegression i metryki zapisane do MLflow.")

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/685d0259a7eb44f78fdb3ca7902dceaa/artifacts
+end_time: 1746956188621
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: 685d0259a7eb44f78fdb3ca7902dceaa
+run_name: illustrious-bird-418
+run_uuid: 685d0259a7eb44f78fdb3ca7902dceaa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746956188478
+status: 3
+tags: []
+user_id: Dell

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/462766536406854651/61eaa169840f4a2c8927cb6fb7a235b0/artifacts
+end_time: 1746961292524
+entry_point_name: ''
+experiment_id: '462766536406854651'
+lifecycle_stage: active
+run_id: 61eaa169840f4a2c8927cb6fb7a235b0
+run_name: monumental-stag-910
+run_uuid: 61eaa169840f4a2c8927cb6fb7a235b0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746961285137
+status: 3
+tags: []
+user_id: Dell

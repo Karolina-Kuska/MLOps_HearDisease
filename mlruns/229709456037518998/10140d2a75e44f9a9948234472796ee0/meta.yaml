@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/10140d2a75e44f9a9948234472796ee0/artifacts
+end_time: 1746956394812
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: 10140d2a75e44f9a9948234472796ee0
+run_name: sneaky-shark-943
+run_uuid: 10140d2a75e44f9a9948234472796ee0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746956383274
+status: 3
+tags: []
+user_id: Dell

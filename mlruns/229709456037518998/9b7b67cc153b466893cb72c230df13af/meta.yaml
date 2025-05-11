@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/229709456037518998/9b7b67cc153b466893cb72c230df13af/artifacts
+end_time: 1746957193015
+entry_point_name: ''
+experiment_id: '229709456037518998'
+lifecycle_stage: active
+run_id: 9b7b67cc153b466893cb72c230df13af
+run_name: grandiose-grub-997
+run_uuid: 9b7b67cc153b466893cb72c230df13af
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746957192872
+status: 3
+tags: []
+user_id: Dell
