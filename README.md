@@ -7,14 +7,20 @@ Dataset source: [Kaggle Heart Failure Prediction Dataset](https://www.kaggle.com
 Struktura projektu:
 
 MLOps_HearDisease/
-│
+├── .github
+│   └── workflows
+│       └── CI_CD_pipeline.yml
 ├── data/                # dane surowe i przetworzone
 │   ├── raw/
 │   └── processed/
+├── models/
+│
 │
 ├── src/                 # cały kod (preprocessing, trening modeli, itd.)
 │   ├── data/
-│   ├── models/
+│   ├──models/
+        ├── train_model_LR.py
+        └── train_model_RFC.py
 │   ├── features/
 │   └── pipelines/
 │
@@ -24,5 +30,11 @@ MLOps_HearDisease/
 │
 ├── README.md            # dokumentacja projektu
 ├── requirements.txt     # lista bibliotek
-├── .gitignore           # plik ignorujący niepotrzebne rzeczy
-└── setup.py             # opcjonalnie, jak chcesz mieć instalowalny projekt
+├── .gitignore           # plik ignorujący niepotrzebne rzeczy           
+├── evaluate_model.py
+├── run_pipeline.bat
+├── test_evaluate_model.py
+├── test_load_data.py
+├── test_preprocessing.py
+├── test_split_model.py
+└── test_train_model.py  

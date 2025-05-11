@@ -1,0 +1,6 @@
+artifact_location: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/409616355441367506
+creation_time: 1746966191062
+experiment_id: '409616355441367506'
+last_update_time: 1746966191062
+lifecycle_stage: active
+name: heart_disease_experiment_LogisticRegression

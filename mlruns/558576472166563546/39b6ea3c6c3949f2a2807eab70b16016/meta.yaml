@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/WWSI_Git/MLOps_HearDisease/mlruns/558576472166563546/39b6ea3c6c3949f2a2807eab70b16016/artifacts
+end_time: 1746966163660
+entry_point_name: ''
+experiment_id: '558576472166563546'
+lifecycle_stage: active
+run_id: 39b6ea3c6c3949f2a2807eab70b16016
+run_name: overjoyed-mouse-341
+run_uuid: 39b6ea3c6c3949f2a2807eab70b16016
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746966154390
+status: 3
+tags: []
+user_id: Dell
