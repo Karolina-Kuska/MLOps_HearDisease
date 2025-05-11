@@ -14,6 +14,7 @@ def evaluate_model(model_name):
     X_test = df_test.drop(columns=["HeartDisease"])
     y_test = df_test["HeartDisease"]
 
+    # Załaduj model
     model = joblib.load(model_path)
     y_pred = model.predict(X_test)
 
@@ -24,6 +25,7 @@ def evaluate_model(model_name):
     f1 = f1_score(y_test, y_pred)
     roc_auc = roc_auc_score(y_test, y_pred)
 
+    # Wyświetlenie wyników
     print(f"Model: {model_name}")
     print(f"Accuracy: {accuracy}")
     print(f"Precision: {precision}")
@@ -35,11 +37,12 @@ def evaluate_model(model_name):
     # Ustawienie eksperymentu w MLflow
     mlflow.set_experiment(f"heart_disease_experiment_{model_name}")
 
-    # Ustal miejsce, gdzie będą zapisywane artefakty
-    artifact_path = os.path.join(os.getcwd(), "artifacts")
+    # Zmień lokalizację zapisywania artefaktów
+    artifact_path = "mlflow_artifacts"  # Przykład lokalizacji w obrębie projektu
     if not os.path.exists(artifact_path):
         os.makedirs(artifact_path)
 
+    # Rozpocznij uruchomienie MLflow
     with mlflow.start_run(run_name=f"eval_{model_name}"):
         mlflow.log_param("model", model_name)
         mlflow.log_metrics({
@@ -49,15 +52,14 @@ def evaluate_model(model_name):
             "f1_score": f1,
             "roc_auc": roc_auc
         })
-
-        # Zapisz model w MLflow, wskazując miejsce przechowywania artefaktów
+        
+        # Zapisz model w MLflow
         mlflow.sklearn.log_model(
-            model, "model",
-            input_example=X_test.iloc[:1],
+            model, "model", 
+            input_example=X_test.iloc[:1], 
             signature=mlflow.models.infer_signature(X_test, y_pred)
         )
 
 if __name__ == "__main__":
-    #model_name = sys.argv[1] if len(sys.argv) > 1 else "LogisticRegression"
     evaluate_model("LogisticRegression")
     evaluate_model("RandomForestClassifier")
