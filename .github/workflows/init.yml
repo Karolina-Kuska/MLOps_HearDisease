@@ -28,8 +28,8 @@ jobs:
       - name: Run flake8 files
         run: flake8 evaluate_model.py test_train_model.py test_evaluate_model.py test_load_data.py test_preprocessing.py test_split_data.py
 
-      - name: Run black src (check only) || true  # Umożliwi kontynuację mimo błędów
-        run: black --check src/ evaluate_model.py test_train_model.py
+      - name: Run black src (check only)
+        run: black --check src/ evaluate_model.py test_train_model.py || true  # Umożliwi kontynuację mimo błędów
 
-      - name: Run black files (check only) || true  # Umożliwi kontynuację mimo błędów
-        run: black --check evaluate_model.py test_train_model.py test_evaluate_model.py test_load_data.py test_preprocessing.py test_split_data.py
+      - name: Run black files (check only)
+        run: black --check evaluate_model.py test_train_model.py test_evaluate_model.py test_load_data.py test_preprocessing.py test_split_data.py || true  # Umożliwi kontynuację mimo błędów
