@@ -5,16 +5,28 @@ import mlflow
 import mlflow.sklearn
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import (
-    accuracy_score, precision_score, recall_score, f1_score,
-    roc_auc_score, classification_report, confusion_matrix, ConfusionMatrixDisplay
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score,
+    roc_auc_score,
+    classification_report,
+    confusion_matrix,
+    ConfusionMatrixDisplay,
 )
 import matplotlib.pyplot as plt
 from mlflow.models.signature import infer_signature
 
-mlflow.set_tracking_uri("file:///tmp/mlruns")  # 👈 zmień lokalizację artefaktów na poprawną w Linuxie
-def train_and_save_model_RFC(train_path="data/processed/train_preprocessed.csv",
-                         test_path="data/processed/test_preprocessed.csv",
-                         model_output_dir="models"):
+mlflow.set_tracking_uri(
+    "file:///tmp/mlruns"
+)  # 👈 zmień lokalizację artefaktów na poprawną w Linuxie
+
+
+def train_and_save_model_RFC(
+    train_path="data/processed/train_preprocessed.csv",
+    test_path="data/processed/test_preprocessed.csv",
+    model_output_dir="models",
+):
     # Wczytanie danych
     train_df = pd.read_csv(train_path)
     test_df = pd.read_csv(test_path)
@@ -25,7 +37,11 @@ def train_and_save_model_RFC(train_path="data/processed/train_preprocessed.csv",
     y_test = test_df["HeartDisease"]
 
     # Trening RFC
-    model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
+    model = RandomForestClassifier(
+        n_estimators=100,
+        max_depth=10,
+        random_state=42
+    )
     model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
 
@@ -45,7 +61,9 @@ def train_and_save_model_RFC(train_path="data/processed/train_preprocessed.csv",
 
     # Zapis modelu
     os.makedirs(model_output_dir, exist_ok=True)
-    model_path = os.path.join(model_output_dir, "heart_disease_model_RandomForestClassifier.pkl")
+    model_path = os.path.join(
+        model_output_dir, "heart_disease_model_RandomForestClassifier.pkl"
+    )
     joblib.dump(model, model_path)
     print(f"Model zapisany jako {model_path}")
 
@@ -64,7 +82,10 @@ def train_and_save_model_RFC(train_path="data/processed/train_preprocessed.csv",
 
         # Confusion matrix
         os.makedirs("figures", exist_ok=True)
-        disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test, y_pred), display_labels=["No", "Yes"])
+        disp = ConfusionMatrixDisplay(
+            confusion_matrix=confusion_matrix(y_test, y_pred),
+            display_labels=["No", "Yes"],
+        )
         disp.plot()
         fig_path = "figures/confusion_matrix_rfc.png"
         plt.savefig(fig_path)
@@ -73,10 +94,7 @@ def train_and_save_model_RFC(train_path="data/processed/train_preprocessed.csv",
         # Logowanie modelu
         signature = infer_signature(X_test, y_pred)
         mlflow.sklearn.log_model(
-            model,
-            "model",
-            input_example=X_test.iloc[:1],
-            signature=signature
+            model, "model", input_example=X_test.iloc[:1], signature=signature
         )
 
     print("✅ RandomForestClassifier i metryki zapisane do MLflow.")

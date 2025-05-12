@@ -1,12 +1,16 @@
-import sys
 import joblib
 import pandas as pd
 import mlflow
 import os
 from sklearn.metrics import (
-    accuracy_score, precision_score, recall_score,
-    f1_score, roc_auc_score, classification_report
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score,
+    roc_auc_score,
+    classification_report,
 )
+
 
 def evaluate_model(model_name):
     model_path = f"models/heart_disease_model_{model_name}.pkl"
@@ -38,27 +42,32 @@ def evaluate_model(model_name):
     mlflow.set_experiment(f"heart_disease_experiment_{model_name}")
 
     # Zmień lokalizację zapisywania artefaktów
-    artifact_path = "mlflow_artifacts"  # Przykład lokalizacji w obrębie projektu
+    # Przykład lokalizacji w obrębie projektu
+    artifact_path = "mlflow_artifacts"
     if not os.path.exists(artifact_path):
         os.makedirs(artifact_path)
 
     # Rozpocznij uruchomienie MLflow
     with mlflow.start_run(run_name=f"eval_{model_name}"):
         mlflow.log_param("model", model_name)
-        mlflow.log_metrics({
-            "accuracy": accuracy,
-            "precision": precision,
-            "recall": recall,
-            "f1_score": f1,
-            "roc_auc": roc_auc
-        })
-        
+        mlflow.log_metrics(
+            {
+                "accuracy": accuracy,
+                "precision": precision,
+                "recall": recall,
+                "f1_score": f1,
+                "roc_auc": roc_auc,
+            }
+        )
+
         # Zapisz model w MLflow
         mlflow.sklearn.log_model(
-            model, "model", 
-            input_example=X_test.iloc[:1], 
-            signature=mlflow.models.infer_signature(X_test, y_pred)
+            model,
+            "model",
+            input_example=X_test.iloc[:1],
+            signature=mlflow.models.infer_signature(X_test, y_pred),
         )
+
 
 if __name__ == "__main__":
     evaluate_model("LogisticRegression")

@@ -1,11 +1,17 @@
 import mlflow
-import pickle
 import joblib
 import pandas as pd
-from sklearn.metrics import classification_report, accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+from sklearn.metrics import (
+    classification_report,
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score,
+    roc_auc_score,
+)
 
 # Wczytanie danych testowych
-#df_test = pd.read_csv("data/processed/test.csv")
+# df_test = pd.read_csv("data/processed/test.csv")
 df_test = pd.read_csv("data/processed/test_preprocessed.csv")
 
 # Wczytanie modelu
@@ -46,6 +52,6 @@ mlflow.sklearn.log_model(
     model,
     "model",
     input_example=X_test.iloc[:1],
-    signature=mlflow.models.infer_signature(X_test, y_pred)
-    )
+    signature=mlflow.models.infer_signature(X_test, y_pred),
+)
 mlflow.end_run()

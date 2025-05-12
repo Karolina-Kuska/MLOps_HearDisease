@@ -3,6 +3,7 @@
 import kagglehub
 import pandas as pd
 
+
 def load_heart_data() -> pd.DataFrame:
     """
     Downloads the heart dataset using kagglehub and returns a pandas DataFrame.
